@@ -9,6 +9,9 @@
 
     
     <style>
+       body{
+           background-color: blue;
+       }
        
 
 
@@ -24,15 +27,18 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.6.2/css/bootstrap-slider.css" integrity="sha256-+bpMasWDxDlsVpNW3oZlL7L4RacwsP70u2fZt6Rxrmc=" crossorigin="anonymous" />
         <div class="container">
                 <div class="row">
-                  <div class="col-8 offset-2" style="border:10px solid black;">
-                    <h1>THE CONVERTER</h1>
+                  <div class="col-8 offset-2" style="border:10px solid black; background-color: aliceblue;">
+                    <h1 align="center">THE CONVERTER</h1>
                     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#SpeedConv">SPEED</button>
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#TempConv">TEMPERATURE</button>
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#LengthConv">LENGTH</button>
-                  </div>
+                    <div align="center">
+                        <button style="size: 20px;" type="button" class="btn btn-primary" data-toggle="modal" data-target="#SpeedConv">SPEED</button>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#TempConv">TEMPERATURE</button>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#LengthConv">LENGTH</button>
+                    </div>
                 </div>
+            </div>
         </div>
+        
 
         <!-- Modal SPEED-->
         <div class="modal fade bd-example-modal-lg" id="SpeedConv" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -64,7 +70,7 @@
 
                         <p>
                             <label>KPH</label>
-                            <input id="inputMPH" type="number" placeholder="MPH"
+                            <input id="inputKPH" type="number" placeholder="MPH"
                             oninput="speedConverterKPH(this.value)"
                             onchange="speedConverterKPH(this.value)">
                         </p>
@@ -76,7 +82,7 @@
 
                         <p>
                             <label>MACH</label>
-                            <input id="inputMPH" type="number" placeholder="MPH"
+                            <input id="inputMACH" type="number" placeholder="MPH"
                             oninput="speedConverterMACH(this.value)"
                             onchange="speedConverterMACH(this.value)">
                         </p>
@@ -88,7 +94,7 @@
 
                         <p>
                             <label>KNOTS</label>
-                            <input id="inputMPH" type="number" placeholder="MPH"
+                            <input id="inputKNOTS" type="number" placeholder="MPH"
                             oninput="speedConverterKNOTS(this.value)"
                             onchange="speedConverterKNOTS(this.value)">
                         </p>
@@ -251,13 +257,17 @@
         document.getElementById("outputMPHmach").innerHTML=valNum*761.207;
         }
 
+        console.log('ini 1');
+
         function speedConverterMACH(valNum) {
         document.getElementById("outputKPHmach").innerHTML=valNum*1225.044;
         }
+        console.log('ini 2');
 
         function speedConverterMACH(valNum) {
         document.getElementById("outputKNOTSmach").innerHTML=valNum*661.4708;
         }
+        console.log('ini 3');
 
 
         // KNOTS FORMULA
