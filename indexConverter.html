@@ -12,9 +12,6 @@
        body{
            background-color: blue;
        }
-       
-
-
     </style>
 
 
@@ -27,13 +24,14 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.6.2/css/bootstrap-slider.css" integrity="sha256-+bpMasWDxDlsVpNW3oZlL7L4RacwsP70u2fZt6Rxrmc=" crossorigin="anonymous" />
         <div class="container">
                 <div class="row">
-                  <div class="col-8 offset-2" style="border:10px solid black; background-color: aliceblue;">
-                    <h1 align="center">THE CONVERTER</h1>
-                    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                  <div class="col-8 offset-2" style="border:20px solid black; background-color: aliceblue;background: url('https://sloanreview.mit.edu/content/uploads/2017/09/MAG-Richtner-Creating-Measurements-Innovation-1200.jpg');background-size: 500px">
+                    <h1 align="center" style="font-style: normal ; font-size: 1.2cm;">THE CONVERTER</h1>
+                    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
                     <div align="center">
-                        <button style="size: 20px;" type="button" class="btn btn-primary" data-toggle="modal" data-target="#SpeedConv">SPEED</button>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#TempConv">TEMPERATURE</button>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#LengthConv">LENGTH</button>
+                        <button style="font-size: 1.2cm;font-style: normal;  color: #f7f7f7; background-color: black" type="button" class="btn btn-primary" data-toggle="modal" data-target="#SpeedConv">SPEED</button>
+                        <button style="font-size: 1.2cm;font-style: normal;  color: #f7f7f7; background-color: black" type="button"type="button" class="btn btn-primary" data-toggle="modal" data-target="#TempConv">TEMPERATURE</button>
+                        <button style="font-size: 1.2cm;font-style: normal;  color: #f7f7f7; background-color: black" type="button"type="button" class="btn btn-primary" data-toggle="modal" data-target="#LengthConv">LENGTH</button>
+                        <button style="font-size: 1.2cm;font-style: normal;  color: #f7f7f7; background-color: black" type="button" class="btn btn-primary" data-toggle="modal" data-target="#WeightConv">WEIGHT</button>
                     </div>
                 </div>
             </div>
@@ -41,11 +39,11 @@
         
 
         <!-- Modal SPEED-->
-        <div class="modal fade bd-example-modal-lg" id="SpeedConv" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div align="center" class="modal fade bd-example-modal-lg" id="SpeedConv" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg">
-              <div class="modal-content">
+              <div class="modal-content" style="background: url('https://sloanreview.mit.edu/content/uploads/2017/09/MAG-Richtner-Creating-Measurements-Innovation-1200.jpg');background-size: 10px">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Speed Converter</h5>
+                        <h5 style="font-size: 1.2cm; font-style: oblique;" class="modal-title" id="exampleModalLabel">Speed Converter</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -58,60 +56,34 @@
                         <p>
                             <label>MPH</label>
                             <input id="inputMPH" type="number" placeholder="MPH"
-                            oninput="speedConverterMPH(this.value)"
-                            onchange="speedConverterMPH(this.value)">
+                            oninput="speedConverterMPH(this.value)">mph
                         </p>
-                        <p>KPH: <span id="outputKPHmph"></span></p>
-
-                        <p>Knots: <span id="outputKNOTSmph"></span></p>
-
-                        <p>Mach: <span id="outputMACHmph"></span></p>
-
-
+                       
                         <p>
                             <label>KPH</label>
-                            <input id="inputKPH" type="number" placeholder="MPH"
-                            oninput="speedConverterKPH(this.value)"
-                            onchange="speedConverterKPH(this.value)">
+                            <input id="inputKPH" type="number" placeholder="KPH"
+                            oninput="speedConverterKPH(this.value)">km/h
                         </p>
-                        <p>MPH: <span id="outputMPHkph"></span></p>
-
-                        <p>Knots: <span id="outputKNOTSkph"></span></p>
-
-                        <p>Mach: <span id="outputMACHkph"></span></p>
-
+                        
                         <p>
                             <label>MACH</label>
-                            <input id="inputMACH" type="number" placeholder="MPH"
-                            oninput="speedConverterMACH(this.value)"
-                            onchange="speedConverterMACH(this.value)">
+                            <input id="inputMACH" type="number" placeholder="MACH"
+                            oninput="speedConverterMACH(this.value)">ma
                         </p>
-                        <p>MPH: <span id="outputMPHmach"></span></p>
-
-                        <p>KPH: <span id="outputKPHmach"></span></p>
-
-                        <p>Knots: <span id="outputKNOTSmach"></span></p>
-
+                       
                         <p>
                             <label>KNOTS</label>
-                            <input id="inputKNOTS" type="number" placeholder="MPH"
-                            oninput="speedConverterKNOTS(this.value)"
-                            onchange="speedConverterKNOTS(this.value)">
+                            <input id="inputKNOTS" type="number" placeholder="KNOTS"
+                            oninput="speedConverterKNOTS(this.value)">kn
                         </p>
-                        <p>MPH: <span id="outputMPHknots"></span></p>
-
-                        <p>KPH: <span id="outputKPHknots"></span></p>
-
-                        <p>Mach: <span id="outputMACHknots"></span></p>
-                    
-                    
+                       
 
                 <!--modal button  -->
 
-                  <div class="modal-footer">
+                    <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     
-                 </div> 
+                    </div> 
                 </div>
             </div>
         </div>
@@ -121,43 +93,37 @@
 
       <!-- Modal TEMPERATURE-->
       
-    <div class="modal fade bd-example-modal-lg" id="TempConv" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div align="center" class="modal fade bd-example-modal-lg" id="TempConv" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
-            <div class="modal-content">
+            <div class="modal-content"style="background: url('https://sloanreview.mit.edu/content/uploads/2017/09/MAG-Richtner-Creating-Measurements-Innovation-1200.jpg');background-size: 10px">
                     <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Temperature Converter</h5>
+                            <h5 style="font-size: 1.2cm; font-style: oblique;" class="modal-title" id="exampleModalLabel">Temperature Converter</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
   
   
-                <div class="modal-body">
+                <div class="modal-body" >
   
                         <p>
                         <label>Fahrenheit</label>
                         <input id="inputFahrenheit" type="number" placeholder="Fahrenheit" oninput="temperatureConverterFahrenheit(this.value)" 
                         onchange="temperatureConverterFahrenheit(this.value)">
                         </p>
-                        <p>Celcius: <span id="outputCelciusFahrenheit"></span></p>
-                        <p>Kelvin: <span id="outputKelvinFahrenheit"></span></p>
-
+                        
                         <p>
                         <label>Celcius</label>
                         <input id="inputCelcius" type="number" placeholder="Celcius" oninput="temperatureConverterCelcius(this.value)" 
                         onchange="temperatureConverterCelcius(this.value)">
                         </p>
-                        <p>Fahrenheit: <span id="outputFahrenheitCelcius"></span></p>
-                        <p>Kelvin: <span id="outputKelvinCelcius"></span></p>
-
+                        
                         <p>
                         <label>Kelvin</label>
                         <input id="inputKelvin" type="number" placeholder="Kelvin" oninput="temperatureConverterKelvin(this.value)" 
                         onchange="temperatureConverterKelvin(this.value)">
                         </p>
-                        <p>Fahrenheit: <span id="outputFahrenheitKelvin"></span></p>
-                        <p>Celcius: <span id="outputCelciusKelvin"></span></p>
-
+                        
                         <!--modal button close  -->
   
                     <div class="modal-footer">
@@ -174,11 +140,11 @@
     <!-- MODAL LENGTH -->
 
 
-    <div class="modal fade bd-example-modal-lg" id="LengthConv" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg">
-              <div class="modal-content">
+    <div align="center" class="modal fade bd-example-modal-lg" id="LengthConv" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+              <div class="modal-content"style="background: url('https://sloanreview.mit.edu/content/uploads/2017/09/MAG-Richtner-Creating-Measurements-Innovation-1200.jpg');background-size: 10px">
                     <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Length Converter</h5>
+                            <h5 style="font-size: 1.2cm; font-style: oblique;" class="modal-title" id="exampleModalLabel">Length Converter</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
@@ -187,101 +153,126 @@
             
                     <p>
                     <label>Feet</label>
-                    <input id="inputFeet" type="number" placeholder="Feet" oninput="LengthConverter(this.value)" onchange="LengthConverter(this.value)">
+                    <input id="inputFeet" type="text" placeholder="Feet" oninput="LengthConverterFEET(this.value)">ft
+                    </p>
+
+                    <p>
+                    <label>Meters</label>
+                    <input id="inputMeters" type="text" placeholder="Meters" oninput="LengthConverterMETERS(this.value)" >m
                     </p>
 
                     <p>
                     <label>Inches</label>
-                    <input id="inputFeet" type="number" placeholder="Feet" oninput="LengthConverter(this.value)" onchange="LengthConverter(this.value)">
+                    <input id="inputInches" type="text" placeholder="Inches" oninput="LengthConverterINCHES(this.value)" >in
                     </p>
 
                     <p>
                     <label>CentiMeters</label>
-                    <input id="inputFeet" type="number" placeholder="Feet" oninput="LengthConverter(this.value)" onchange="LengthConverter(this.value)">
+                    <input id="inputCentimeters" type="text" placeholder="CentiMeters" oninput="LengthConverterCENTIMETERS(this.value)" >cm
                     </p>
 
                     <p>
                     <label>KiloMeters</label>
-                    <input id="inputFeet" type="number" placeholder="Feet" oninput="LengthConverter(this.value)" onchange="LengthConverter(this.value)">
+                    <input id="inputKilometers" type="text" placeholder="KiloMeters" oninput="LengthConverterKILOMETERS(this.value)" >km
                     </p>
 
                     <p>
                     <label>Miles</label>
-                    <input id="inputFeet" type="number" placeholder="Feet" oninput="LengthConverter(this.value)" onchange="LengthConverter(this.value)">
+                    <input id="inputMiles" type="text" placeholder="Miles" oninput="LengthConverterMILES(this.value)" >miles
                     </p>
-
-
                 
+            </div>
         </div>
     </div>
-    </div>
-          
-          
-          
-    
 
+    <!-- MODAL WEIGHT -->
+
+    <div align="center" class="modal fade bd-example-modal-lg" id="WeightConv" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+              <div class="modal-content" style="background: url('https://sloanreview.mit.edu/content/uploads/2017/09/MAG-Richtner-Creating-Measurements-Innovation-1200.jpg');background-size: 10px">
+                    <div class="modal-header">
+                            <h5 style="font-size: 1.2cm; font-style: oblique;" class="modal-title" id="exampleModalLabel">weight Converter</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                    </div>
+
+                    <p>
+                    <label>Pounds</label>
+                    <input id="inputPounds" type="number" placeholder="Pounds" oninput="weightConverterPounds(this.value)">lb
+                    </p>
+
+                    <p>
+                    <label>KiloGrams</label>
+                    <input id="inputKG" type="number" placeholder="KiloGrams" oninput="weightConverterKiloGrams(this.value)">kg
+                    </p>
+
+                    <p>
+                    <label>Ounces</label>
+                    <input id="inputOUNC" type="number" placeholder="Ounces" oninput="weightConverterOunces(this.value)">oz
+                    </p>
+
+                    <p>
+                    <label>Grams</label>
+                    <input id="inputGR" type="number" placeholder="Grams" oninput="weightConverterGrams(this.value)">gr
+                    </p>
+
+                    <p>
+                    <label>Stones</label>
+                    <input id="inputSTONES" type="number" placeholder="Stones" oninput="weightConverterStones(this.value)">st
+                    </p>
+
+                    
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        
+                    </div>
+            </div>
+        </div>
+    </div>
       <script>
         //   SPEED CONVERTER FORMULA
 
         // MPH FORMULA
 
         function speedConverterMPH(valNum) {
-        document.getElementById("outputKPHmph").innerHTML=valNum*1.609344;
-        }
-
-        function speedConverterMPH(valNum) {
-        document.getElementById("outputKNOTSmph").innerHTML=valNum/1.150779;
-        }
-
-        function speedConverterMPH(valNum) {
-        document.getElementById("outputMACHmph").innerHTML=valNum/761.207;
+        document.querySelector("#inputKPH").value=valNum*1.609344;
+        
+        document.querySelector("#inputKNOTS").value=valNum/1.150779;
+        
+        document.querySelector("#inputMACH").value=valNum/761.207;
         }
 
         // KPH FORMULA
 
         function speedConverterKPH(valNum) {
-        document.getElementById("outputMPHkph").innerHTML=valNum/1.609344;
-        }
-
-        function speedConverterKPH(valNum) {
-        document.getElementById("outputKNOTSkph").innerHTML=valNum/1.852;
-        }
-
-        function speedConverterKPH(valNum) {
-        document.getElementById("outputMACHkph").innerHTML=valNum/1225.044;
+        document.querySelector("#inputMPH").value=valNum/1.609344;
+        
+        document.querySelector("#inputKNOTS").value=valNum/1.852;
+        
+        document.querySelector("#inputMACH").value=valNum/1225.044;
         }
 
         // MACH FORMULA
 
         function speedConverterMACH(valNum) {
-        document.getElementById("outputMPHmach").innerHTML=valNum*761.207;
+        document.querySelector("#inputMPH").value=valNum*761.207;
+        
+        document.querySelector("#inputKPH").value=valNum*1225.044;
+        
+        document.querySelector("#inputKNOTS").value=valNum*661.4708;
         }
-
-        console.log('ini 1');
-
-        function speedConverterMACH(valNum) {
-        document.getElementById("outputKPHmach").innerHTML=valNum*1225.044;
-        }
-        console.log('ini 2');
-
-        function speedConverterMACH(valNum) {
-        document.getElementById("outputKNOTSmach").innerHTML=valNum*661.4708;
-        }
-        console.log('ini 3');
+        
 
 
         // KNOTS FORMULA
 
         function speedConverterKNOTS(valNum) {
-        document.getElementById("outputMPHknots").innerHTML=valNum*1.150779;
-        }
-
-        function speedConverterKNOTS(valNum) {
-        document.getElementById("outputKPHknots").innerHTML=valNum*1.852;
-        }
-
-        function speedConverterKNOTS(valNum) {
-        document.getElementById("outputMACHknots").innerHTML=valNum/661.4708;
+        document.querySelector("#inputMPH").value=valNum*1.150779;
+        
+        document.querySelector("#inputKPH").value=valNum*1.852;
+        
+        document.querySelector("#inputMACH").value=valNum/661.4708;
         }
 
         // TEMPERATURE FORMULA
@@ -290,37 +281,138 @@
 
         function temperatureConverterFahrenheit(valNum) {
         valNum = parseFloat(valNum);
-        document.getElementById("outputCelciusFahrenheit").innerHTML=(valNum-32)/1.8;
-        }
-
-        function temperatureConverterFahrenheit(valNum) {
-        valNum = parseFloat(valNum);
-        document.getElementById("outputKelvinFahrenheit").innerHTML=((valNum-32)/1.8)+273.15;
+        document.querySelector("#inputCelcius").value=(valNum-32)/1.8;
+        document.querySelector("#inputKelvin").value=((valNum-32)/1.8)+273.15;
         }
 
         // CELCIUS FORMULA
 
         function temperatureConverterCelcius(valNum) {
         valNum = parseFloat(valNum);
-        document.getElementById("outputFahrenheitCelcius").innerHTML=(valNum*1.8)+32;
-        }
-
-        function temperatureConverterCelcius(valNum) {
-        valNum = parseFloat(valNum);
-        document.getElementById("outputKelvinCelcius").innerHTML=(valNum+273.15);
+        document.querySelector("#inputFahrenheit").value=(valNum*1.8)+32;
+        document.querySelector("#inputKelvin").value=(valNum+273.15);
         }
 
         // KELVIN FORMULA
 
         function temperatureConverterKelvin(valNum) {
         valNum = parseFloat(valNum);
-        document.getElementById("outputFahrenheitKelvin").innerHTML=((valNum-273.15)*1.8)+32;
+        document.querySelector("#inputFahrenheit").value=((valNum-273.15)*1.8)+32;
+        document.querySelector("#inputCelcius").value=valNum-273.15;
         }
 
-        function temperatureConverterKelvin(valNum) {
-        valNum = parseFloat(valNum);
-        document.getElementById("outputCelciusKelvin").innerHTML=valNum-273.15;
+
+        // LENGTH FORMULA 
+        
+        // FEET FORMULA
+
+        function LengthConverterFEET(valNum) {
+        document.querySelector("#inputMeters").value=valNum/3.2808
+        document.querySelector("#inputInches").value=valNum*12
+        document.querySelector("#inputCentimeters").value=valNum/0.032808
+        document.querySelector("#inputKilometers").value=valNum/3280.8
+        document.querySelector("#inputMiles").value=valNum*0.00018939
         }
+
+        //METERS FORMULA
+
+        function LengthConverterMETERS(valNum) {
+        document.querySelector("#inputFeet").value=valNum*3.2808
+        document.querySelector("#inputInches").value=valNum*39.370
+        document.querySelector("#inputCentimeters").value=valNum/0.01
+        document.querySelector("#inputKilometers").value=valNum/1000
+        document.querySelector("#inputMiles").value=valNum*0.00062137
+        }
+
+        //INCHES FORMULA
+
+        function LengthConverterINCHES(valNum) {
+        document.querySelector("#inputMeters").value=valNum/39.370
+        document.querySelector("#inputFeet").value=valNum*0.083333
+        document.querySelector("#inputCentimeters").value=valNum/0.39370
+        document.querySelector("#inputKilometers").value=valNum/39370
+        document.querySelector("#inputMiles").value=valNum*0.000015783
+        }
+
+        //CENTIMETERS FORMULA
+
+        function LengthConverterCENTIMETERS(valNum) {
+        document.querySelector("#inputMeters").value=valNum/100
+        document.querySelector("#inputInches").value=valNum*0.39370
+        document.querySelector("#inputFeet").value=valNum*0.032808
+        document.querySelector("#inputKilometers").value=valNum/100000
+        document.querySelector("#inputMiles").value=valNum*0.0000062137
+        }
+
+        //KILOMETERS FORMULA 
+
+        function LengthConverterKILOMETERS(valNum) {
+        document.querySelector("#inputMeters").value=valNum*1000
+        document.querySelector("#inputInches").value=valNum*39370
+        document.querySelector("#inputCentimeters").value=valNum*100000
+        document.querySelector("#inputFeet").value=valNum*3280.8
+        document.querySelector("#inputMiles").value=valNum*0.62137
+        }
+
+        //MILES FORMULA
+
+        function LengthConverterMILES(valNum) {
+        document.querySelector("#inputMeters").value=valNum/0.00062137
+        document.querySelector("#inputInches").value=valNum*63360
+        document.querySelector("#inputCentimeters").value=valNum/0.0000062137
+        document.querySelector("#inputKilometers").value=valNum/0.62137
+        document.querySelector("#inputFeet").value=valNum*5280
+        }
+
+        //WEIGHT FORMULA
+
+        //POUNDS FORMULA
+
+        function weightConverterPounds(valNum) {
+        document.querySelector("#inputKG").value=valNum/2.2046;
+        document.querySelector("#inputOUNC").value=valNum*16;
+        document.querySelector("#inputGR").value=valNum/0.0022046;
+        document.querySelector("#inputSTONES").value=valNum*0.071429;
+        }
+
+        //KiloGrams FORMULA
+
+        function weightConverterKiloGrams(valNum) {
+        document.querySelector("#inputPounds").value=valNum*0.0625;
+        document.querySelector("#inputOUNC").value=valNum/35.274;
+        document.querySelector("#inputGR").value=valNum*1000;
+        document.querySelector("#inputSTONES").value=valNum*0.1574;
+        }
+
+        //Ounces FORMULA
+
+        function weightConverterOunces(valNum) {
+        document.querySelector("#inputPounds").value=valNum*0.0625;
+        document.querySelector("#inputKG").value=valNum/35.274;
+        document.querySelector("#inputGR").value=valNum/0.035274;
+        document.querySelector("#inputSTONES").value=valNum*0.0044643;
+        }
+
+        //Grams FORMULA
+
+        function weightConverterGrams(valNum) {
+        document.querySelector("#inputPounds").value=valNum*0.0022046;
+        document.querySelector("#inputKG").value=valNum/1000;
+        document.querySelector("#inputOUNC").value=valNum*0.035274;
+        document.querySelector("#inputSTONES").value=valNum*0.00015747;
+        }
+
+        //Stones FORMULA
+
+        function weightConverterStones(valNum) {
+        document.querySelector("#inputPounds").value=valNum*14;
+        document.querySelector("#inputKG").value=valNum/0.15747;
+        document.querySelector("InputOUNC").value=valNum*224;
+        document.querySelector("#inputGR").value=valNum/0.00015747;
+        }
+
+
+
 
       </script>
 </body>
